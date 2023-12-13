@@ -1,3 +1,6 @@
 import { createContext } from "react";
 
-const CardContext = createContext();
+export const CartContext = createContext({
+
+    items: []
+});
