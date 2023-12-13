@@ -67,13 +67,13 @@ function App() {
     });
   }
 
-  const ctxValue = {
-    items: shoppingCart.items,
-    addItemToCart: handleAddItemToCart,
-  };
+  // const ctxValue = {
+  //   items: shoppingCart.items,
+  //   addItemToCart: handleAddItemToCart
+  // };
 
   return (
-    <CartContext.Provider value={ctxValue}>
+    <CartContext.Provider value={{items:[]}}>
       {/* <CartContext.Provider value={shoppingCart}> */}
       {/* <CartContext.Provider value={{ items: [] }}> */}
       <Header
