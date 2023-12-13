@@ -1,5 +1,5 @@
-import { createContext } from "react";
-
+import { createContext, useState } from "react";
+import { DUMMY_PRODUCTS } from "../dummy-products";
 export const CartContext = createContext({
 
     items: [],
@@ -8,7 +8,7 @@ export const CartContext = createContext({
 });
 
 
-export default function CartContextProvider(){
+export default function CartContextProvider({children}){
     const [shoppingCart, setShoppingCart] = useState({
         items: [],
       });
@@ -75,5 +75,8 @@ export default function CartContextProvider(){
         updateItemQuantity:handleUpdateCartItemQuantity
       };
     
+      return <CartContext.Provider value={ctxValue}>
+        {children}
+      </CartContext.Provider>
 
 }
