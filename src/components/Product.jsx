@@ -12,7 +12,7 @@ export default function Product({
 
 }) {
 
-  const {addItemToCart} = useContext(CartContext);
+  const { addItemToCart } = useContext(CartContext);
 
 
   return (
